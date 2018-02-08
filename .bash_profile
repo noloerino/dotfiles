@@ -1,6 +1,8 @@
 # colorize prompt
 PS1='\[\e[1;92m\]\u\[\e[0m\]@\[\e[0;33m\]\h\[\e[0m\]:\[\e[1;36m\]\w\[\e[0m\]\$ '
-#PS1='\[\e[1;92m\]\u\$\[\e[0m\] '
+#PS1='\[\e[1;92m\]\$\[\e[0m\] '
+
+alias anon='. anon'
 
 # custom scripts
 export PATH="$PATH:$HOME/bin"
