@@ -3,7 +3,7 @@ import Graphics.Gloss
 main = do
     display FullScreen bgColor genPicture
 
-bgColor = makeColor 197 25 255 10
+bgColor = makeColor 197 25 255 50
 
 s1StartColor = makeColorI 55 252 213 10 -- hex #37fcd5
 s1EndColor = makeColorI 58 111 234 10 -- hex #1b7a0
@@ -12,7 +12,7 @@ s2EndColor = makeColorI 196 26 17 10
 s2StartColor = makeColorI 221 158 48 10
 
 genPicture :: Picture
-genPicture = Pictures $ concat [s1Gradient, s2Gradient]
+genPicture = Pictures $ concat [s2Gradient, s1Gradient]
 
 x0 = 800
 y0 = -400
@@ -48,7 +48,7 @@ makeColorString n c0 c1 = [c0] ++ makeColorString (n - 1) nextColor c1
     -- for two colors, the difference should just be nb - na
     where nextComp na nb = na + (nb - na) / (fromIntegral (n - 1))
           (r, g, b, _) = zip4Tuple nextComp (rgbaOfColor c0) (rgbaOfColor c1)
-          a = 0.018 -- 1 - (exp ((-0.01) * fromIntegral n))
+          a = 0.03 --1 / (1 + 650 * (exp (-0.07 * (fromIntegral n - 20)))) --1 - 0.9 * (exp ((-0.0005) * fromIntegral n))
           nextColor = makeColor r g b a
 
 zip4Tuple :: (a -> b -> c) -> (a, a, a, a) -> (b, b, b, b) -> (c, c, c, c)

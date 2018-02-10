@@ -1,0 +1,27 @@
+#!/bin/bash
+NIGHT_CHANGE=2159 #10pm
+DAY_CHANGE=0859 #9am
+TIME=`date +%k%M`
+
+LIGHT_PATH="$HOME/dotfiles/desktop_light.png"
+DARK_PATH="$HOME/dotfiles/desktop_dark.png"
+
+set_img() {
+    osascript -e "tell application \"Finder\" to set desktop picture to \"$1\" as POSIX file"
+#    sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$1'"
+}
+
+if [ "$1" == "dark" ]; then
+    set_img $DARK_PATH
+    exit 0
+elif [ "$1" == "light" ]; then
+    set_img $LIGHT_PATH
+    exit 0
+fi
+
+if [ $TIME -gt $NIGHT_CHANGE ] || [ $TIME -lt $DAY_CHANGE ]; then
+    set_img $DARK_PATH
+elif [ $TIME -lt $NIGHT_CHANGE ] && [ $TIME -gt $DAY_CHANGE ]; then
+    set_img $LIGHT_PATH
+fi
+
