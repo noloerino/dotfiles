@@ -1,7 +1,7 @@
 #!/bin/bash
 FILE_NAME=$1
 shift
-if [[ $FILE_NAME == "*\.java" ]]; then
+if [[ $FILE_NAME == *\.java ]]; then
     :
 else
     FILE_NAME="$FILE_NAME.java"
