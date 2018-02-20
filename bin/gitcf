@@ -9,6 +9,6 @@ fi
 MSG=$(fortune -s -e computers education fortunes linuxcookie science startrek wisdom)
 MSG=${MSG//$'\n'/} # Removes newlines
 
-git commit -m "$1 \033[0;90m| $MSG\033[0m"
+git commit -m "$1 | $MSG"
 
 echo -e "Fortune: \033[0;90m$MSG\033[0m"
