@@ -20,7 +20,7 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 
 # for easy text editing
-alias sublime="open -a Sublime\ Text"
+alias sublime="open -a Sublime\ Text ."
 
 alias ipynb="jupyter notebook"
 
