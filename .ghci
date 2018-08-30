@@ -1,1 +1,1 @@
-/Users/jhshi/.ghci
+:set prompt "\ESC[0;32m\STX%s \ESC[1;91m\STXλ \ESC[m\STX"

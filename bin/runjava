@@ -1,0 +1,14 @@
+#!/bin/bash
+FILE_NAME=$1
+shift
+if [[ $FILE_NAME == *\.java ]]; then
+    :
+else
+    FILE_NAME="$FILE_NAME.java"
+fi
+javac $FILE_NAME
+COMPILED=$?
+if [[ $COMPILED -eq 0 ]]; then
+    echo "Compiled $FILE_NAME"
+    java ${FILE_NAME%\.java} $@
+fi

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Pretty much an alias for git commit -m
+
+if [ $# -eq 0 ]; then
+    echo "Please enter a commit message"
+    exit 1
+fi
+
+if [[ $1 == "--amend" ]]; then
+    git commit --amend -m "$2"
+else
+    git commit -m "$1"
+fi

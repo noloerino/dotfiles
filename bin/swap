@@ -1,0 +1,6 @@
+#!/bin/bash
+# Swaps 2 files
+TMP=tmp.$$
+mv $1 $TMP
+mv $2 $1
+mv $TMP $2

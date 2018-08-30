@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Commits with a message from fortune
+
+if [ $# -eq 0 ]; then
+    echo "Usage: gitcf [commit message]"
+    exit 1
+fi
+if [[ $1 == "--amend" ]]; then
+    echo "Slow your roll! I haven't implemented that yet."
+    exit 1
+fi
+MSG=$(fortune -s -e computers education fortunes linuxcookie science startrek wisdom)
+MSG=${MSG//$'\n'/} # Removes newlines
+
+git commit -m "$1 | Fortune: $MSG"
+
+echo -e "Fortune: \033[0;90m$MSG\033[0m"
