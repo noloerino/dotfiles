@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]; then
+    echo "Usage: modprep module_name version"
+    exit 1
+fi
+
+MODNAME=$1
+MODVERS=$2
+MODULES="/global/home/users/jhshi/modules"
+mkdir -p $MODULES/modules/$MODNAME/$MODVERS \
+    && mkdir -p $MODULES/modfiles/$MODNAME/ \
+    && touch $MODULES/modfiles/$MODNAME/$MODVERS \
+    && mkdir -p $MODULES/sources/$MODNAME/$MODVERS \
+    && mkdir -p $MODULES/scripts/$MODNAME/ \
+    && touch $MODULES/scripts/$MODNAME/$MODVERS \
+    && echo "Created module folders and files for $MODNAME/$MODVERS." \
+    && exit 0
+echo "Error in generating folders for $MODNAME/$MODVERS."

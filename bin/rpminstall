@@ -1,0 +1,40 @@
+#!/bin/bash
+# Installs an RPM packge into ~/modules/rpm, and generates the appropriate modfiles
+# Make sure that the appropriate subdirectory of the rpm folder is in PATH
+
+if [[ $# -eq 0 ]]; then
+    echo "Usage: rpminstall URL"
+    exit 1
+fi
+
+RPM_PATH="$HOME/modules/rpm"
+if [ ! -d $RPM_PATH ]; then
+    echo "Creating $RPM_PATH"
+    mkdir $RPM_PATH
+fi
+ARCHIVES="$RPM_PATH/archives"
+if [ ! -d $ARCHIVES ]; then
+    mkdir $ARCHIVES
+fi
+
+cd $ARCHIVES
+
+# download rpm archive
+# https://stackoverflow.com/questions/8574038/wget-downloaded-file-name
+#wget --server-response -q -O - $URL 2>&1 | 
+#  grep "Content-Disposition:" | tail -1 | 
+#  awk 'match($0, /filename=(.+)/, f){ print f[1] }' )
+URL=$1
+# TODO more robust filename matching
+FILENAME=$(basename "$URL")
+wget $URL
+if [[ $? -ne 0 ]]; then 
+    echo "Could not download archive at $URL"
+    exit $WGET_STATUS
+fi
+
+cd "$RPM_PATH/"
+rpm2cpio "$ARCHIVES/$FILENAME" | cpio -div
+if [[ $? -eq 0 ]]; then
+    echo -e "\033[1;92mInstallation complete.\033[0m Make sure you add the appropriate directories to your \$PATH, or the appropriate module file."
+fi
