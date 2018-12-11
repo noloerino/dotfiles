@@ -3,6 +3,11 @@ if [ -f "$HOME/.env" ]; then
     source "$HOME/.env"
 fi
 
+# aliases
+if [ -f "$HOME/.bash_aliases" ]; then
+    source "$HOME/.bash_aliases"
+fi
+
 # colorize prompt
 PS1='\[\e[1;92m\]\u\[\e[0m\]@\[\e[0;33m\]\h\[\e[0m\]:\[\e[1;36m\]\w\[\e[0m\]\$ '
 #PS1='\[\e[1;92m\]\$\[\e[0m\] '
