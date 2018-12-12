@@ -4,7 +4,7 @@ case $(uname) in
     Darwin) DEVICE="MAC" ;;
     Linux)
         HN=$(hostname)
-        if [[ $HN == *.brc ]]; then
+        if [[ $HN == *.brc ]] || [[ $HN == *.savio* ]]; then
             DEVICE="SAVIO"
         else
             DEVICE="LINUX"
