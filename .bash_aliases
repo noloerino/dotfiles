@@ -46,3 +46,5 @@ alias la='ls -a'
 alias lla='ls -la'
 
 alias finduser='grep /etc/passwd -e'
+
+alias findcompiler='objdump --full-contents --section=.comment'

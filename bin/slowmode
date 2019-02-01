@@ -3,17 +3,16 @@
 # Performs countermeasures against savio being a "squirrely jerk", as one ticket described it.
 if [ -z $1 ]; then
     echo "Usage: slowmode on|off"
-    exit 1
-fi
-
-if [ $1 = "on" ]; then
-    export TMPDIR="$HOME/tmp"
-    echo "Set TMPDIR to $TMPDIR"
-    alias ls="ls -F" # removes color
-    echo "Removed ls colors"
 else
-    unset TMPDIR
-    echo "Restored TMPDIR"
-    alias ls="ls -F --color=auto"
-    echo "Restored ls colors"
+    if [ $1 = "on" ]; then
+        export TMPDIR="$HOME/tmp"
+        echo "Set TMPDIR to $TMPDIR"
+        alias ls="\\ls -F" # removes color
+        echo "Removed ls colors"
+    else
+        unset TMPDIR
+        echo "Restored TMPDIR"
+        alias ls="ls -F --color=auto"
+        echo "Restored ls colors"
+    fi
 fi
