@@ -1,0 +1,9 @@
+[user]
+	name = noloerino
+	email = jhshi07@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	cm = commit -m
+    amend = commit --amend -m
+	st = status
