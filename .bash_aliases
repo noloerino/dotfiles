@@ -49,4 +49,4 @@ alias finduser='grep /etc/passwd -e'
 
 alias findcompiler='objdump --full-contents --section=.comment'
 
-alias todos='grep -rni todo'
+alias todos='grep -rni todo .'
