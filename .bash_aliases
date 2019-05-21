@@ -33,6 +33,7 @@ if [ $DEVICE == "SAVIO" ]; then
     alias ml='module load'
     alias mrm='module rm'
     alias wall='echo "please reconsider your life decisions"'
+    alias findmod='find /global/software/sl-7.x86_64/modfiles -type d -exec ls -d {} \; | grep'
 fi
 
 alias py='python3'
