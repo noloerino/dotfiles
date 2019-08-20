@@ -1,0 +1,4 @@
+#!/bin/bash
+
+chgrp -R consultsw $@
+chmod -R g+w $@
