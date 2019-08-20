@@ -21,6 +21,7 @@ if [ $DEVICE == "MAC" ]; then
     alias pgstart="pg_ctl -D /usr/local/var/postgres start"
     alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
     alias ls='ls -F'
+    alias yt-sound="youtube-dl -x"
 else
     alias ls='ls -F --color=auto'
 fi
@@ -41,6 +42,7 @@ alias venv="virtualenv"
 alias tma="tmux attach -t"
 alias tms="tmux new -s"
 
+alias l='ls'
 alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
