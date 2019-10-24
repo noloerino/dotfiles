@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+ORIG_DIR=$(pwd)
+find_venv() {
+    while [[ $(pwd) != / ]]; do
+        # https://unix.stackexchange.com/a/35265
+        FOUND=$(find . -maxdepth 1 -mindepth 1 -type d -name "venv")
+        if [[ ! -z $FOUND ]]; then
+            echo "Found env at $(pwd)"
+            source "$FOUND/bin/activate"
+            return
+        fi
+        cd ..
+    done
+    echo "No venv found."
+    return
+}
+
+find_venv
+cd $ORIG_DIR

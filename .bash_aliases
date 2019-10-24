@@ -38,7 +38,7 @@ if [ $DEVICE == "SAVIO" ]; then
 fi
 
 alias py='python3'
-alias venv="virtualenv"
+alias venvup=". venvup"
 
 alias tma="tmux attach -t"
 alias tms="tmux new -s"
