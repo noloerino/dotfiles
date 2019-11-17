@@ -33,3 +33,5 @@ export ANT_OPTS="-Dant.logger.defaults=$HOME/.ant_opts"
 # export PATH="/Users/jhshi/anaconda/bin:$PATH"
 
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export PATH="$HOME/Documents/research/boolector/build/bin:$PATH"

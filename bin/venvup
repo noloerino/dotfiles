@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 ORIG_DIR=$(pwd)
 find_venv() {

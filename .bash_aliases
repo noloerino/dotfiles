@@ -22,6 +22,7 @@ if [ $DEVICE == "MAC" ]; then
     alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
     alias ls='ls -F'
     alias yt-sound="youtube-dl -x"
+    alias journal="vim $HOME/Desktop/Journal/dated/$(date '+%Y-%m-%d')"
 else
     alias ls='ls -F --color=auto'
 fi
@@ -53,3 +54,4 @@ alias finduser='grep /etc/passwd -e'
 alias findcompiler='objdump --full-contents --section=.comment'
 
 alias todos='grep -rni todo .'
+
