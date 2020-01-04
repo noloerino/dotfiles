@@ -35,3 +35,5 @@ export ANT_OPTS="-Dant.logger.defaults=$HOME/.ant_opts"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 export PATH="$HOME/Documents/research/boolector/build/bin:$PATH"
+
+export PATH="$HOME/.poetry/bin:$PATH"
