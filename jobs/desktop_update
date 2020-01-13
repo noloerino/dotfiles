@@ -1,5 +1,5 @@
 #!/bin/bash
-HOUR=`date +%k`
+HOUR=$(date +%k)
 
 BG_DIR="$HOME/dotfiles/bg_sorted"
 
@@ -14,7 +14,7 @@ else
     FILENAME="$BG_DIR/$1.png"
 fi
 
-if [ -f $FILENAME ]; then
+if [ -f "$FILENAME" ]; then
     set_img $FILENAME
 fi
 
