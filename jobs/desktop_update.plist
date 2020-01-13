@@ -6,13 +6,130 @@
     <string>desktop_update</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/jhshi/dotfiles/jobs/desktopUpdate</string>
+        <string>/Users/jhshi/dotfiles/jobs/desktop_update</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
     <key>StartCalendarInterval</key>
-    <!-- run once at 10 PM and at 8 AM -->
+    <!-- run hourly (gotta c/p every timestamp :/) -->
     <array>
+        <dict>
+            <key>Hour</key>
+            <integer>00</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>01</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>02</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>03</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>04</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>05</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>06</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>07</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>08</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>09</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>10</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>11</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>12</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>13</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>14</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>15</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>16</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>17</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>18</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict><dict>
+            <key>Hour</key>
+            <integer>19</integer>
+            <key>Minute</key>
+            <integer>59</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>20</integer>
+            <key>Minute</key>
+            <integer>00</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>20</integer>
+            <key>Minute</key>
+            <integer>00</integer>
+        </dict>
         <dict>
             <key>Hour</key>
             <integer>22</integer>
@@ -21,7 +138,13 @@
         </dict>
         <dict>
             <key>Hour</key>
-            <integer>09</integer>
+            <integer>23</integer>
+            <key>Minute</key>
+            <integer>00</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>24</integer>
             <key>Minute</key>
             <integer>00</integer>
         </dict>

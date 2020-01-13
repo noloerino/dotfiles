@@ -1,0 +1,20 @@
+#!/bin/bash
+HOUR=`date +%k`
+
+BG_DIR="$HOME/dotfiles/bg_sorted"
+
+set_img() {
+    osascript -e "tell application \"Finder\" to set desktop picture to \"$1\" as POSIX file"
+#    sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$1'"
+}
+
+if [ -z "$1" ]; then
+    FILENAME="$BG_DIR/$HOUR.png"
+else
+    FILENAME="$BG_DIR/$1.png"
+fi
+
+if [ -f $FILENAME ]; then
+    set_img $FILENAME
+fi
+
