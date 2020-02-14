@@ -18,32 +18,38 @@
             <integer>00</integer>
             <key>Minute</key>
             <integer>59</integer>
-        </dict><dict>
+        </dict>
+        <dict>
             <key>Hour</key>
             <integer>01</integer>
             <key>Minute</key>
             <integer>59</integer>
-        </dict><dict>
+        </dict>
+        <dict>
             <key>Hour</key>
             <integer>02</integer>
             <key>Minute</key>
             <integer>59</integer>
-        </dict><dict>
+        </dict>
+        <dict>
             <key>Hour</key>
             <integer>03</integer>
             <key>Minute</key>
             <integer>59</integer>
-        </dict><dict>
+        </dict>
+        <dict>
             <key>Hour</key>
             <integer>04</integer>
             <key>Minute</key>
             <integer>59</integer>
-        </dict><dict>
+        </dict>
+        <dict>
             <key>Hour</key>
             <integer>05</integer>
             <key>Minute</key>
             <integer>59</integer>
-        </dict><dict>
+        </dict>
+        <dict>
             <key>Hour</key>
             <integer>06</integer>
             <key>Minute</key>

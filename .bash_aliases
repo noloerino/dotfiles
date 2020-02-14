@@ -23,6 +23,7 @@ if [ $DEVICE == "MAC" ]; then
     alias ls='ls -F'
     alias yt-sound="youtube-dl -x"
     alias journal="vim $HOME/Desktop/Journal/dated/$(date '+%Y-%m-%d')"
+    alias gtkwave="open -a gtkwave"
 else
     alias ls='ls -F --color=auto'
 fi
@@ -40,6 +41,7 @@ fi
 
 alias py='python3'
 alias venvup=". venvup"
+alias newvenv="python3 -m virtualenv venv"
 
 alias tma="tmux attach -t"
 alias tms="tmux new -s"
