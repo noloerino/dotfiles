@@ -1,0 +1,5 @@
+# Flip black/white:
+convert $input -channel RGB $output
+
+# Replace transparent with white:
+convert -flatten $input $output
