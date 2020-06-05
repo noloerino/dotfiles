@@ -39,6 +39,11 @@ if [ $DEVICE == "SAVIO" ]; then
     alias findmod='find /global/software/sl-7.x86_64/modfiles -type d -exec ls -d {} \; | grep'
 fi
 
+if [ $DEVICE == "LINUX" ]; then
+    alias ssh-watch='sudo tail -f /var/log/auth.log | grep ssh'
+    alias ssh-recent='sudo less /var/log/auth.log | grep ssh | tail -n 10'
+fi
+
 alias py='python3'
 alias venvup=". venvup"
 alias newvenv="python3 -m virtualenv venv"
