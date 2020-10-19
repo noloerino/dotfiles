@@ -12,7 +12,7 @@ case $(uname) in
         ;;
 esac
 
-if [ $DEVICE == "MAC" ]; then
+if [ $DEVICE = "MAC" ]; then
     alias gvim='open -a MacVim'
     alias subl="open -a Sublime\ Text"
     alias mdown="open -a MacDown"
@@ -27,7 +27,7 @@ else
     alias ls='ls -F --color=auto'
 fi
 
-if [ $DEVICE == "SAVIO" ]; then
+if [ $DEVICE = "SAVIO" ]; then
     alias slowmode='. slowmode'
     alias tosavio="srun --pty -A ac_scsguest -p savio -t 00:05:00 bash -i"
     alias myjobs="squeue -u $USER"
@@ -38,7 +38,7 @@ if [ $DEVICE == "SAVIO" ]; then
     alias findmod='find /global/software/sl-7.x86_64/modfiles -type d -exec ls -d {} \; | grep'
 fi
 
-if [ $DEVICE == "LINUX" ]; then
+if [ $DEVICE = "LINUX" ]; then
     alias ssh-watch='sudo tail -f /var/log/auth.log | grep ssh'
     alias ssh-recent='sudo less /var/log/auth.log | grep ssh | tail -n 10'
 fi
