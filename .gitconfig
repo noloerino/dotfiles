@@ -13,3 +13,7 @@
 	lg = !"git lg1"
 [core]
 	editor = vim
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
