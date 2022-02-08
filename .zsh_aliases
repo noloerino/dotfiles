@@ -43,11 +43,12 @@ fi
 if [ $DEVICE = "LINUX" ]; then
     alias ssh-watch='sudo tail -f /var/log/auth.log | grep ssh'
     alias ssh-recent='sudo less /var/log/auth.log | grep ssh | tail -n 10'
+    alias open='xdg-open'
 fi
 
 alias py='python3'
 alias venvup=". venvup"
-alias newvenv="python3 -m virtualenv venv"
+alias newvenv="python3 -m venv venv"
 alias jlab="jupyter-lab"
 
 alias tma="tmux attach -t"
