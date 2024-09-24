@@ -3,6 +3,7 @@
 	email = jhshi07@gmail.com
 [alias]
 	co = checkout
+	sw = switch
 	br = branch
 	cm = commit -m
 	amend = commit --amend -m
@@ -17,3 +18,5 @@
 	defaultBranch = main
 [pull]
 	ff = only
+[pager]
+	branch = false
