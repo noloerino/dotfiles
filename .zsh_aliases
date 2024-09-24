@@ -65,3 +65,5 @@ alias findcompiler='objdump --full-contents --section=.comment'
 
 alias todos='rg --ignore -i todo'
 
+alias coup='conda activate'
+alias cdown='conda deactivate'
