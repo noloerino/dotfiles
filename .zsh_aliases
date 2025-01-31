@@ -63,7 +63,7 @@ alias finduser='grep /etc/passwd -e'
 
 alias findcompiler='objdump --full-contents --section=.comment'
 
-alias todos='rg --ignore -i todo'
+alias todos="rg --ignore -i '\btodo\b'"
 
 alias coup='conda activate'
 alias cdown='conda deactivate'
